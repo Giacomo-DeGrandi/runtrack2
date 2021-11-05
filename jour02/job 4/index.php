@@ -4,7 +4,7 @@ $num = 0;
 
 
 for ( $num = 0 ; $num <= 100 ; $num++ ){
-	// Number of multiples of n from 1 to m is m/n (integer division). 100/3 donc % 3??
+	// Number of multiples of n from 1 to m is m/n (integer division). 100/3 donc % 3
 
 	if ($num % 3 == 0 ){ 
 	echo "<br/>";		
@@ -24,11 +24,7 @@ for ( $num = 0 ; $num <= 100 ; $num++ ){
 }
 
 
-
 //se $num == ogni numero che tra 0 e 100 diviso per 3 dà resto 0 
-
-
-
 ?>
 
 
