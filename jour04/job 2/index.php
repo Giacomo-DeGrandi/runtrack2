@@ -2,10 +2,10 @@
 <body>
 
 <form action="#" method="get">
-Name: <input type="text" name="name[name]"><br>
-Lastname: <input type="text" name="lastname[lastname]"><br>
-Age: <input type="text" name="age[age]"><br>
-State: <input type="text" name="state[state]"><br>
+Name: <input type="text" name="name"><br>
+Lastname: <input type="text" name="lastname"><br>
+Age: <input type="text" name="age"><br>
+State: <input type="text" name="state"><br>
 <input type="submit">
 </form>
     <table>
@@ -20,9 +20,10 @@ $z=0;
 
 
 foreach($_GET as $k => $z){
+    if($z !=''){
         echo "<tr><td>".$k."</td>" ;
         echo "<td>".$z."</td></tr>" ;
-    $z++;
+    $z++;}
 }
 
 
