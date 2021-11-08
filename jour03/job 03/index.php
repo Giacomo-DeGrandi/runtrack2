@@ -1,17 +1,18 @@
 <?php
 
 $str = "I m sorry Dave I m afraid I can t do that";
-$str2 = "aeiou";
+$vow = ['a','e','i','o','u','I'];
 
-$i= 0;
-  
-while (isset($str[$i])) {
-	if ($i % 2 == 0){
-	echo $str[$i];
-}
-	$i++;
-}
+$x=0;
 
+while (isset($str[$x])) {										
+	foreach ($vow as $value){	
+		if($str[$x] == $value){ 
+			echo $str[$x];		
+		} 
+	}
+	$x++;			
+}
 
 /*
 
