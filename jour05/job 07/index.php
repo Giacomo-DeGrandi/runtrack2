@@ -33,7 +33,7 @@ function gras($str){
 }
 			
 function cesar($str){
-	$alpha=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','w','x','y','z'];
+	$alpha=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 		for($d=0; $d<=isset($str[$d]); $d++){
 				for($m=0; $m<=isset($alpha[$m]); $m++){
 					if($str[$d] == $alpha[$m]){
