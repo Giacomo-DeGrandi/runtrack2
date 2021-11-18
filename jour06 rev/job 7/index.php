@@ -1,27 +1,57 @@
 <?php
 
-$tab = ['chaise', 'verre', 'chat'];
-
-$alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','w','x','y','z'];
-//	[0,1,2,3,4,5,6,7,8,9]
-
-$croissant = true;
-$x=0;
+function countnow($anything){					// en fin mon count() personelle
+	for($x=0; $x<=isset($anything[$x]); $x++){	// compte une string ou un array et donne un int
+	}return $x; 
+}
 
 
-echo $tab[0][0];				// TRICKKKK
 
+$tab = ['uvw','cdg','mno']; //for the test was 29,16,55,12,34
 
 function bubblesort($tab,$croissant){
-	$alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','w','x','y','z'];
-	foreach($alpha as $k => $v){
-		if ($v == $tab[0][0]){
-			$k = 0;
-			echo $v;
+	if (isset($croissant)){ 
+		$lenght = countnow($tab);
+		for($i=0; $i< $lenght; $i++){			  // first loop start 
+			for($j=0; $j< $lenght -1; $j++){ 	  // second loop start  try echo $tab[$j] to check the values 
+											 	  // this will echo EACH VALUE in the same 
+											 	  // written order that $tab for the NUM of ELEMENTS of the table 
+												  // ____----> here start the swap
+				if($tab[$j] > $tab[$j + 1]){ 	  // if my $tab[$j] (ea. '55') is bigger than $tab[$j + 1] (in this
+												  // case '12' ):       1st we create an alias for the swap, that
+					$alias		=	$tab[$j + 1]; // is equal to the second element we check, $tab[$j + 1] (or '55')
+					$tab[$j + 1]=	$tab[$j];	  // we assign this value to the value before $tab[$j] (or '12') 
+					$tab[$j]	=	$alias;		  // we assign the first value to the $alias (that is the second one)
+				}		
+			}
+		}	
+		//for($i=0; $i<$lenght; $i++){
+		//	echo $tab[$i];
+		//}
+	} else { 
+		$lenght = countnow($tab);
+		for($i=0; $i< $lenght; $i++){
+			for($j=0; $j< $lenght - 1; $j++){
+
+				if($tab[$j] < $tab[$j + 1]){ 	  // here's the sign to decroissant							  
+					$alias		=	$tab[$j]; 
+					$tab[$j]	=	$tab[$j + 1];	  
+					$tab[$j + 1]=	$alias;
+				}
+			}
+		}	
+		for($i=0; $i<$lenght; $i++){
+		echo $tab[$i];
 		}
-		echo $k;
 	}
 }
+
+
+$croissant=null;
+
+ bubblesort($tab,$croissant);
+
+
 
 		/*
 
@@ -32,6 +62,12 @@ fonction doit retourner le tableau trié par ordre croissant, sinon la fonction
 doit retourner le tableau trié par ordre décroissant.
 Exemple : Si tab contient [“abc”, “ghi”, “def”] le resultat sera “abc”, “def”,
 “ghi” par ordre croissant et “ghi”, “def”, “abc” par ordre décroissant.
+
+			//idee pour le morpion !!!!!
+
+			$tab[0][1][0]
+			$tab[0][1][0]
+			$tab[0][1][0]
 
 	//$x=0;		// *
 
@@ -67,7 +103,6 @@ Exemple : Si tab contient [“abc”, “ghi”, “def”] le resultat sera “
 		//}
 
 
-bubblesort($tab,$croissant);
 
 
 ?>
